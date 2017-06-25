@@ -1,0 +1,360 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+  overflow: hidden;
+}
+
+img {
+	width: auto
+}
+
+#principal {
+	width: 1100px;
+	height: 620px;
+  margin: auto;  
+  visibility: visible;
+  background: black;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+@-webkit-keyframes movPrincipal {  
+  from{opacity: 1; visibility: visible;  }  	
+  to {	opacity: 0; visibility: hidden; }
+}
+
+.conjunto1 {
+	position: absolute;
+  /*animation: movConjunto1 5s;
+  animation-delay: 35s;
+  animation-fill-mode: forwards;*/
+  width: 100%;
+  visibility: visible;  
+  opacity: 1;
+}
+
+@-webkit-keyframes movConjunto1 {
+  from { opacity: 1;  visibility: visible;}  	
+	to { opacity: 0;  visibility: hidden;}
+}
+
+.fondo {
+  max-width: 1100px;
+  min-height: 620px;
+  position: absolute;  
+  top:-225px;
+  left: 0
+}
+
+
+.tierra {
+ background-image: url(img/tierra.jpg);
+  width: 876px;
+  height: 550px;
+  top: -436px;
+  position: absolute;
+  left: 125px;
+  box-shadow: inset 16px 0 40px 3px rgba(0,0,0,0.9),
+  inset -3px 0 5px 2px rgba(255,255,255,0.16);
+  background-size: 1400px;  
+  border-radius: 50%;  
+  animation-name: rotate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+ 
+@keyframes rotate {
+  0% { background-position: 0px; }
+  100% { background-position: 1400px; }
+}
+
+.tierra img {
+  min-width: 100%;
+}
+
+.gaviotas{	  
+   position: relative;   
+   z-index: 2;
+   top: 180px;
+   left: -200px;
+   height: 40px;
+   animation: movGaviotas 15s;  
+   animation-fill-mode: forwards;
+}
+
+.gaviotas img {
+	max-height:  100%;
+	position: absolute;  
+	bottom: 0;
+	left: 33%;	
+}
+
+@-webkit-keyframes movGaviotas {
+	from {
+    top: 180px;
+    left: -200px;
+    height: 40px;
+  }
+	to {
+    top: 0px;
+    left: 0px;
+    height: 80px;
+
+  }
+}
+
+.luna {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+  top: 0;
+  left: 75px;
+  /* animation: movLuna 25s; */
+  /* animation-fill-mode: forwards; */
+}
+
+@-webkit-keyframes movLuna {
+	0% {top: 50px;
+    left: -200px;}
+	50% {top: -40px;
+    left: 0px;}
+  100% {top: 50px;
+    left: -200px;}
+}
+
+.barco {
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    width: 580px;
+    top: 225px;
+    left: calc(50% - 290px);
+    animation: movBarco 2s infinite linear;    
+}
+
+.barco img {
+    position: absolute;    
+    max-width: 100%;
+    left: 0;
+}
+
+@-webkit-keyframes movBarco {
+  from  { top:225px; }  
+  to { top:230px; } 
+}
+
+.nubes {
+    position: absolute;
+    top: 270px;
+    height: 330px;
+    width: 1920px;
+    background-image: url(img/Ocean-Fest-official_0019_Layer-4.png);
+    background-size: contain;
+    background-position-y: 0;
+    overflow: hidden;    
+    z-index: 3;
+}
+
+.nubesAnimacion {
+  animation: movNubes, nubesOpacas;   
+  animation-duration: 500s, 5s; 
+  animation-iteration-count: infinite, 1;
+  animation-timing-function: linear, linear; 
+  animation-delay: 0s, 40s;
+  animation-fill-mode: none, forwards;  
+}
+
+@-webkit-keyframes movNubes {
+   0% { background-position-x :0;}
+	100% { background-position-x: 5000px}
+}
+
+@-webkit-keyframes nubesOpacas {
+   0% { opacity:  1;}
+  100% { opacity: 0;}
+}
+
+
+.textoCabecera {
+	position: relative;
+  text-align: center;
+  height: 168px;
+  width: 100%;
+  z-index:2;
+}
+
+.textoCentral {
+		position: absolute;
+    text-align: center;    
+    z-index: 4;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    animation: movTextoCentral 5s;
+    animation-delay: 30s;
+    animation-fill-mode: forwards; 
+}
+
+@-webkit-keyframes movTextoCentral {
+	from {
+    opacity: 1;
+  }
+  to {
+     opacity: 0; 
+  }
+} 
+
+.horseContainer{
+	height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 5;  
+  left: -135px;
+  top:-470px;
+  animation: movCaballito 20s;
+  animation-fill-mode: forwards;
+  transform: scaleX(-1);
+}
+
+@-webkit-keyframes movCaballito {
+	0% {
+		left: -135px;
+    top:-470px;
+    transform: scaleX(-1);
+	}
+  75% {
+    left: 800px;
+    top: 150px;
+    transform: scaleX(-1);    
+  }
+  76% {
+    transform: scaleX(1);
+  }  
+  100% {
+    left: 200px;
+    top: 35px;    
+    transform: scaleX(1);
+  }
+}
+
+.horse {   
+  max-height: 91%;
+}
+
+@-webkit-keyframes horse {
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(-360deg);
+	}
+}
+
+.castillo {
+	width: 1100px;
+  height: 500px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 2200px;
+  background: url(img/castillo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: movCastillo 60s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes movCastillo {
+  from {    
+    left: 2220px;
+  }
+  to {
+    left: -1100px;
+  }
+}
+
+.castillo img{ 
+	max-width: 100%;
+}
+
+.ola {
+	animation: movBarco 20s infinite; 
+}
+
+.titulo {
+	position: relative;
+	height: 322px;
+  text-align: center;
+}
+
+.presentadoPor {
+	position: relative;	
+	height: 135px;
+  text-align: center;
+}
+
+
+@-webkit-keyframes movBarco3 {
+	from  { top:447px; }	
+	to { top:452px; }	
+}
+
+
+.allInclusive {
+  position: relative;
+  height: 83px;
+  text-align: center;
+}
+
+.grupos {
+	position: relative;
+	overflow: hidden;
+  padding: 0 2%;
+}
+
+.grupo {
+	display: inline-block;
+	width: 24%;
+	float: left;	
+	text-align: center;
+}
+
+.producedBy {
+	position: relative;
+  top: 160px;
+  height: 37px;
+  color: white;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+	color: white;
+}
+
+h2 {
+	margin: 0;
+}
+
+.textoFinal {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  width: 1100px;
+  bottom: 0;
+  height: 307px;
+  z-index: 3;
+  display: block;
+  left: 2200px;
+  animation: movTextoFinal 10s;
+  animation-delay: 30s; 
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes movTextoFinal {
+  from  { left: 2200px; }  
+  to { left: 0; } 
+}

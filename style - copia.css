@@ -1,0 +1,473 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+img {
+	width: auto
+}
+
+.principal {
+	width: 100%;
+	height: 100%;
+}
+
+.conjuntoMix {
+	width: 100%;
+	height: 1100px;
+  margin: auto;
+  background: url(img/Ocean-Fest-official_0029_Fondo.png);
+  position:absolute;
+  overflow: hidden;
+  animation: movConjuntoMix 5s;
+  animation-delay: 50s; 
+  animation-fill-mode: forwards;  
+  opacity: 1;
+  visibility: visible;
+}
+
+@-webkit-keyframes movConjuntoMix {  
+  from{opacity: 1; visibility: visible;  }  	
+  to {	opacity: 0; visibility: hidden; }
+}
+
+.conjunto1 {
+	position: absolute;
+  animation: movConjunto1 5s;
+  animation-delay: 35s;
+  animation-fill-mode: forwards;
+  width: 100%;
+  visibility: visible;  
+  opacity: 1;
+}
+
+@-webkit-keyframes movConjunto1 {
+  
+  from { opacity: 1;  visibility: visible;}  	
+	to { opacity: 0;  visibility: hidden;}
+}
+
+.conjunto2 {
+	position: absolute;
+	animation: movConjunto2 5s;
+  animation-delay: 35s; 
+	animation-fill-mode: forwards; 
+	width: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@-webkit-keyframes movConjunto2 {
+	from { opacity: 0;  visibility: hidden;}		
+	to{ opacity: 1;  visibility: visible;}
+}
+
+.conjunto3 {  
+  background: url(img/fondo.jpg);
+  background-position: center;
+  background-size: cover; 
+  position: absolute;    
+  width: 100%;
+  height: 1100px;  
+  visibility: hidden;  
+  opacity: 0;  
+  animation: movConjuntoTres 5s;  
+  animation-delay: 50s; 
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes movConjuntoTres {
+  from { opacity: 0;  visibility: hidden;}    
+  to{ opacity: 1;  visibility: visible;}
+}
+
+
+.tierra {
+    width: 1920px;
+    height: 1100px;
+    position: absolute;
+    animation: movTierra 25s;
+    animation-fill-mode: forwards; 
+    z-index: 1;
+    top: -223px;
+    left: 50%;
+    margin-left: -860px;
+    overflow: hidden;
+}
+
+.tierra img {
+    max-width: 100%;
+}
+
+@-webkit-keyframes movTierra {
+	0%  {top: -450px; }	
+  50% {top: -223px;  }
+  100%  {top: -450px; } 	
+}
+
+
+.gaviotas{	  
+   position: relative;   
+   z-index: 2;
+   top: 180px;
+   left: -200px;
+   height: 40px;
+   animation: movGaviotas 15s;  
+   animation-fill-mode: forwards;
+}
+
+.gaviotas img {
+	max-height:  100%;
+	position: absolute;  
+	bottom: 0;
+	left: 33%;	
+}
+
+@-webkit-keyframes movGaviotas {
+	from {
+    top: 180px;
+    left: -200px;
+    height: 40px;
+  }
+	to {
+    top: 0px;
+    left: 0px;
+    height: 80px;
+
+  }
+}
+
+.luna1 {
+	  position: absolute;
+    height: 1044px;
+    z-index: 2;
+    top: -40px;
+    animation: movLuna1 25s;
+    animation-fill-mode: forwards; 
+}
+
+@-webkit-keyframes movLuna1 {
+	0% {top: 50px;
+    left: -200px;}
+	50% {top: -40px;
+    left: 0px;}
+  100% {top: 50px;
+    left: -200px;}
+}
+
+		
+
+.barco {
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    width: 580px;
+    top: 330px;
+    left: -290px;
+    animation: movBarco 50s;
+    animation-fill-mode: forwards;
+}
+
+
+.barco img {
+    position: absolute;    
+    max-width: 100%;
+    left: 0;
+}
+
+@-webkit-keyframes movBarco {
+	0%  { top:330px; left: -290px;}
+	20% { top:335px; }	
+	40% { top:330px; }
+	60% { top:335px; }	
+	80% { top:330px;}
+	100%{ top:335px; left: 290px;}	
+}
+
+
+.mar {
+	position: absolute;	
+	height: 70%;	
+	width: 100%;
+	top:58% 	;
+	background-image: url(img/Ocean-Fest-official_0028_Layer-3.png);
+	background-size: cover;
+	z-index: 2;
+  background-position-y: -310px
+}
+
+.nubesOcultas1 {    
+   top: -200px!important;       
+   opacity: 0;  
+   animation: movNubesOcultas1 100s;          
+   z-index: 2;
+}
+
+.nubesOcultas2 {    
+    top: 60px!important;     
+    opacity: 0;  
+    animation: movNubesOcultas2 100s; 
+    z-index: 2;       
+}
+
+@-webkit-keyframes movNubesOcultas2 {
+   0%  { opacity: 0; }
+  25%  { top: 120px; opacity: 0; }
+  35%  { top: 60px; opacity: 1; }
+  45%  { top: 120px; opacity: 0; }
+  50%  { top: 60px; opacity: 1; }  
+  55%  { opacity: 0; }  
+  75%  { opacity:0; }
+  100% { opacity: 0; }  
+}
+
+@-webkit-keyframes movNubesOcultas1 {
+   0%  { opacity: 0; }
+  25%  { top: -100px; opacity: 0; }
+  35%  { top: -200px; opacity: 1; }
+  45%  { top: -100px; opacity: 0; }
+  50%  { top: -200px; opacity: 1; }  
+  55%  { opacity: 0; }  
+  75%  { opacity:0; }
+  100% { opacity: 0; }  
+}
+
+.nubes {
+    position: absolute;
+    top: 365px;
+    height: 690px;
+    width: 1920px;
+    background-image: url(img/Ocean-Fest-official_0019_Layer-4.png);
+    background-size: contain;
+    background-position-y: 0;
+    overflow: hidden;    
+    z-index: 3;
+}
+
+.nubesAnimacion {
+  animation: movNubes 500s infinite linear;   
+}
+
+
+@-webkit-keyframes movNubes {
+   0% { background-position-x :0;}
+	100% { background-position-x: 5000px}
+}
+
+
+.textoCabecera {
+	position: relative;
+  text-align: center;
+  height: 236px;
+  width: 100%;
+  z-index:2;
+}
+
+.textoCentral {
+		position: absolute;
+    text-align: center;
+    animation: movTexto 60s;
+    animation-fill-mode: forwards; 
+    z-index: 4;
+    bottom: 0;
+    height: 530px;
+    width: 100%
+}
+
+@-webkit-keyframes movTexto {
+	0%{ opacity:0 ; }
+	10%,30%,40%{ opacity:1; }
+	50%,60%{ opacity:0 ; }
+	70%,80%,100%{ opacity:1; }
+
+} 
+
+
+.horseContainer{
+	-webkit-perspective: 600px;
+	width:10%;
+	height: 100%;
+	display: inline-flex; 
+	position: absolute; 
+	top:-700px; 
+	left: -100px;
+	animation: movCaballito 100s;
+  animation-fill-mode: forwards;  
+  z-index: 5;
+}
+
+@-webkit-keyframes movCaballito {
+	0% {
+		top:-700px;
+		left: -100px;
+	}
+
+	10% {
+		top:-500px;
+		left: 150px;
+	}
+
+	20% {
+		top:-600px;
+		left: 800px;
+	}
+	25% {
+		top:-280px;
+		left: 100px;
+	}
+	35% {
+		top:-700px;
+		left: -100px;
+	}
+	40% {
+		top:-500px;
+		left: 150px;
+	}
+	45% {
+		top:-600px;
+		left: 800px;
+	}
+	50% {
+		top:-280px;
+		left: 100px;
+	}
+	100% {
+		top:-280px;
+		left: 100px;
+	}
+
+
+
+
+}
+
+.horse {
+    position: absolute;
+    animation: horse 3s linear infinite;
+    -webkit-transform-style: preserve-3d;
+    max-width: 100%;
+    max-height: 70%;
+    align-self: flex-end;
+}
+
+@-webkit-keyframes horse {
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(-360deg);
+	}
+}
+
+.castillo {
+	width: 1920px;
+  height: 900px;
+  position: absolute;  
+  z-index: 1;
+  top: -223px;
+  left: 50%;
+  margin-left: -860px;
+  overflow: hidden;
+  background: url(img/Ocean-Fest-official_0021_Layer-5.png);
+	background-size: cover;
+	text-align: right;
+}
+
+.castillo img{ 
+	max-width: 100%;
+}
+
+
+ .luna2 {
+ 	  position: absolute;
+    height: 200px;
+    top: 200px;
+    left: -25%;
+    width: 100%;
+    text-align: right;
+ }
+
+.luna2 img {	
+	max-height: 100%;
+	position: relative;
+	animation: movLuna2 40s 10s;
+}
+
+@-webkit-keyframes movLuna2 {
+	0%, 50%{
+		top: -100%;
+	}
+	60%{ top: -50%; }
+	100% {top: 0; }
+}
+
+
+.ola {
+	animation: movBarco 20s infinite; 
+}
+
+
+.titulo {
+	position: relative;
+	height: 322px;
+  text-align: center;
+}
+
+.presentadoPor {
+	position: relative;	
+	height: 135px;
+  text-align: center;
+}
+
+.barcoC3 {
+	position: absolute;
+  height: 300px;
+  text-align: center;
+  top: 447px;
+  width: 100%;
+  animation: movBarco3 2s infinite alternate;
+}
+
+@-webkit-keyframes movBarco3 {
+	from  { top:447px; }	
+	to { top:452px; }	
+}
+
+
+.allInclusive {
+  position: relative;
+  height: 90px;
+  text-align: center;
+  top: 160px;
+}
+
+.grupos {
+	position: relative;
+	top: 160px;	
+	overflow: auto;
+  padding: 0 2%;
+}
+
+.grupo {
+	display: inline-block;
+	width: 24%;
+	float: left;	
+	text-align: center;
+}
+
+.producedBy {
+	position: relative;
+  top: 160px;
+  height: 37px;
+  color: white;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+	color: white;
+}
+
+h2 {
+	margin: 0;
+}
